@@ -24,7 +24,7 @@ namespace FlightReservationSys
         {
             conn = new OracleConnection(ordb);
             conn.Open();
-
+            //HELP HELP HELP HELP
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
             cmd.CommandText = "select actorId from actors";
