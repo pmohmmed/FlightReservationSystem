@@ -31,6 +31,8 @@
             this.connected_button_id = new System.Windows.Forms.Button();
             this.disconnected_button_id = new System.Windows.Forms.Button();
             this.crystal_button_id = new System.Windows.Forms.Button();
+            this.comboBox_id = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // connected_button_id
@@ -60,18 +62,39 @@
             this.crystal_button_id.Text = "crystal";
             this.crystal_button_id.UseVisualStyleBackColor = true;
             // 
+            // comboBox_id
+            // 
+            this.comboBox_id.FormattingEnabled = true;
+            this.comboBox_id.Location = new System.Drawing.Point(387, 73);
+            this.comboBox_id.Name = "comboBox_id";
+            this.comboBox_id.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_id.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(396, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "test oracle connection";
+            // 
             // main_form_id
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBox_id);
             this.Controls.Add(this.crystal_button_id);
             this.Controls.Add(this.disconnected_button_id);
             this.Controls.Add(this.connected_button_id);
             this.Name = "main_form_id";
             this.Text = "main";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.main_form_closing);
             this.Load += new System.EventHandler(this.main_form_id_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -80,6 +103,8 @@
         private System.Windows.Forms.Button connected_button_id;
         private System.Windows.Forms.Button disconnected_button_id;
         private System.Windows.Forms.Button crystal_button_id;
+        private System.Windows.Forms.ComboBox comboBox_id;
+        private System.Windows.Forms.Label label1;
     }
 }
 
