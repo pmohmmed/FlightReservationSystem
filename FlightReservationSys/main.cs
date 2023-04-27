@@ -27,7 +27,7 @@ namespace FlightReservationSys
 
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select actorId from actors";
+            cmd.CommandText = "select * from customer";
             cmd.CommandType = CommandType.Text;
             OracleDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
@@ -40,6 +40,11 @@ namespace FlightReservationSys
         private void main_form_closing(object sender, FormClosingEventArgs e)
         {
             conn.Dispose();
+        }
+
+        private void comboBox_id_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
