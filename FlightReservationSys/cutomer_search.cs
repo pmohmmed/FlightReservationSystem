@@ -17,5 +17,10 @@ namespace FlightReservationSys
         {
             InitializeComponent();
         }
+
+        private void cutomer_search_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

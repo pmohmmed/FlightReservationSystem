@@ -19,6 +19,17 @@ namespace FlightReservationSys
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Form cus = new Form();
+            cus.ShowDialog();
+        }
+
+        private void cutomer_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cancel_button_id_Click(object sender, EventArgs e)
+        {
 
         }
     }

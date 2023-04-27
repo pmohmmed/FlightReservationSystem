@@ -38,17 +38,18 @@
             // connected_button_id
             // 
             this.connected_button_id.Location = new System.Drawing.Point(339, 190);
-            this.connected_button_id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.connected_button_id.Margin = new System.Windows.Forms.Padding(4);
             this.connected_button_id.Name = "connected_button_id";
             this.connected_button_id.Size = new System.Drawing.Size(100, 28);
             this.connected_button_id.TabIndex = 1;
             this.connected_button_id.Text = "connected";
             this.connected_button_id.UseVisualStyleBackColor = true;
+            this.connected_button_id.Click += new System.EventHandler(this.connected_button_id_Click);
             // 
             // disconnected_button_id
             // 
             this.disconnected_button_id.Location = new System.Drawing.Point(464, 190);
-            this.disconnected_button_id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.disconnected_button_id.Margin = new System.Windows.Forms.Padding(4);
             this.disconnected_button_id.Name = "disconnected_button_id";
             this.disconnected_button_id.Size = new System.Drawing.Size(100, 28);
             this.disconnected_button_id.TabIndex = 2;
@@ -58,7 +59,7 @@
             // crystal_button_id
             // 
             this.crystal_button_id.Location = new System.Drawing.Point(599, 190);
-            this.crystal_button_id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.crystal_button_id.Margin = new System.Windows.Forms.Padding(4);
             this.crystal_button_id.Name = "crystal_button_id";
             this.crystal_button_id.Size = new System.Drawing.Size(100, 28);
             this.crystal_button_id.TabIndex = 3;
@@ -69,7 +70,7 @@
             // 
             this.comboBox_id.FormattingEnabled = true;
             this.comboBox_id.Location = new System.Drawing.Point(516, 90);
-            this.comboBox_id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox_id.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_id.Name = "comboBox_id";
             this.comboBox_id.Size = new System.Drawing.Size(160, 24);
             this.comboBox_id.TabIndex = 4;
@@ -95,7 +96,7 @@
             this.Controls.Add(this.crystal_button_id);
             this.Controls.Add(this.disconnected_button_id);
             this.Controls.Add(this.connected_button_id);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "main_form_id";
             this.Text = "main";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.main_form_closing);

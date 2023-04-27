@@ -34,31 +34,37 @@
             // 
             // customer_button_id
             // 
-            this.customer_button_id.Location = new System.Drawing.Point(295, 148);
+            this.customer_button_id.Location = new System.Drawing.Point(393, 182);
+            this.customer_button_id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.customer_button_id.Name = "customer_button_id";
-            this.customer_button_id.Size = new System.Drawing.Size(98, 23);
+            this.customer_button_id.Size = new System.Drawing.Size(131, 28);
             this.customer_button_id.TabIndex = 0;
             this.customer_button_id.Text = "customer";
             this.customer_button_id.UseVisualStyleBackColor = true;
+            this.customer_button_id.Click += new System.EventHandler(this.customer_button_id_Click);
             // 
             // admin_button_id
             // 
-            this.admin_button_id.Location = new System.Drawing.Point(441, 148);
+            this.admin_button_id.Location = new System.Drawing.Point(588, 182);
+            this.admin_button_id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.admin_button_id.Name = "admin_button_id";
-            this.admin_button_id.Size = new System.Drawing.Size(75, 23);
+            this.admin_button_id.Size = new System.Drawing.Size(100, 28);
             this.admin_button_id.TabIndex = 1;
             this.admin_button_id.Text = "admin";
             this.admin_button_id.UseVisualStyleBackColor = true;
+            this.admin_button_id.Click += new System.EventHandler(this.admin_button_id_Click);
             // 
             // connected
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.admin_button_id);
             this.Controls.Add(this.customer_button_id);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "connected";
             this.Text = "connected";
+            this.Load += new System.EventHandler(this.connected_Load);
             this.ResumeLayout(false);
 
         }

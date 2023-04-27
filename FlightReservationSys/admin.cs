@@ -16,5 +16,10 @@ namespace FlightReservationSys
         {
             InitializeComponent();
         }
+
+        private void admin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

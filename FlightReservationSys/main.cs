@@ -18,6 +18,8 @@ namespace FlightReservationSys
         public main_form_id()
         {
             InitializeComponent();
+            Form f = new customer_cancel();
+            f.Show();
         }
 
         private void main_form_id_Load(object sender, EventArgs e)
@@ -43,6 +45,11 @@ namespace FlightReservationSys
         }
 
         private void comboBox_id_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void connected_button_id_Click(object sender, EventArgs e)
         {
 
         }

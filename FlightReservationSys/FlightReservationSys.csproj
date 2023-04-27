@@ -88,11 +88,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="admin.resx">
+      <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="connected.resx">
       <DependentUpon>connected.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="customer_cancel.resx">
+      <DependentUpon>customer_cancel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cutomer.resx">
       <DependentUpon>cutomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cutomer_search.resx">
+      <DependentUpon>cutomer_search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>

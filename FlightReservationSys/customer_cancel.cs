@@ -16,5 +16,10 @@ namespace FlightReservationSys
         {
             InitializeComponent();
         }
+
+        private void customer_cancel_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
