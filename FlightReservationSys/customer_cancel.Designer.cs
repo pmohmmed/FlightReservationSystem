@@ -1,6 +1,6 @@
 ﻿namespace FlightReservationSys
 {
-    partial class customer_cancel
+    partial class customer_cancel_form
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // customer_cancel
+            // customer_cancel_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "customer_cancel";
+            this.Name = "customer_cancel_form";
             this.Text = "customer_cancel";
-            this.Load += new System.EventHandler(this.customer_cancel_Load);
             this.ResumeLayout(false);
 
         }

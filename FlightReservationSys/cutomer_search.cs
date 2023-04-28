@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace FlightReservationSys
 {
-    //EDIT EDIT
-    public partial class cutomer_search : Form
+    public partial class cutomer_search_form : Form
     {
-        public cutomer_search()
+        public cutomer_search_form()
         {
             InitializeComponent();
-        }
-
-        private void cutomer_search_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

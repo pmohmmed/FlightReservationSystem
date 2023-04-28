@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace FlightReservationSys
 {
-    public partial class cutomer_form : Form
+    public partial class connected : Form
     {
-        public cutomer_form()
+        public connected()
         {
             InitializeComponent();
         }
 
-        private void cutomer_form_Load(object sender, EventArgs e)
+        private void connected_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void customer_button_id_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_button_id_Click(object sender, EventArgs e)
         {
 
         }

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace FlightReservationSys
 {
-    public partial class admin_form : Form
+    public partial class customer_cancel : Form
     {
-        public admin_form()
+        public customer_cancel()
         {
             InitializeComponent();
+        }
+
+        private void customer_cancel_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

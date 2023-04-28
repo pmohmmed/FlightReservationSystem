@@ -1,6 +1,6 @@
 ﻿namespace FlightReservationSys
 {
-    partial class cutomer_search
+    partial class cutomer_search_form
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // cutomer_search
+            // cutomer_search_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "cutomer_search";
+            this.Name = "cutomer_search_form";
             this.Text = "cutomer_search";
-            this.Load += new System.EventHandler(this.cutomer_search_Load);
             this.ResumeLayout(false);
 
         }
