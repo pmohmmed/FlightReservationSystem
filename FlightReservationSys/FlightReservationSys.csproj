@@ -56,11 +56,17 @@
     <Compile Include="admin.Designer.cs">
       <DependentUpon>admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="connected.cs">
+    <Compile Include="connected_login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="connected.Designer.cs">
-      <DependentUpon>connected.cs</DependentUpon>
+    <Compile Include="connected_login.Designer.cs">
+      <DependentUpon>connected_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="connected_register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="connected_register.Designer.cs">
+      <DependentUpon>connected_register.cs</DependentUpon>
     </Compile>
     <Compile Include="customer_cancel.cs">
       <SubType>Form</SubType>
@@ -91,8 +97,11 @@
     <EmbeddedResource Include="admin.resx">
       <DependentUpon>admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="connected.resx">
-      <DependentUpon>connected.cs</DependentUpon>
+    <EmbeddedResource Include="connected_login.resx">
+      <DependentUpon>connected_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="connected_register.resx">
+      <DependentUpon>connected_register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="customer_cancel.resx">
       <DependentUpon>customer_cancel.cs</DependentUpon>
