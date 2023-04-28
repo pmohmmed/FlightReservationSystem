@@ -50,7 +50,7 @@ namespace FlightReservationSys
                 break;
                 
             }
-     
+            r.Close();
            return id;
             
             
@@ -146,6 +146,22 @@ namespace FlightReservationSys
             else
                 MessageBox.Show("complete all fields");
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void register_form_closing(object sender, FormClosingEventArgs e)
+        {
+            MessageBox.Show("here");
+            conn.Dispose();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("go to login form");
         }
     }
 }
