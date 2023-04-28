@@ -74,11 +74,11 @@
     <Compile Include="customer_cancel.Designer.cs">
       <DependentUpon>customer_cancel.cs</DependentUpon>
     </Compile>
-    <Compile Include="cutomer.cs">
+    <Compile Include="customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cutomer.Designer.cs">
-      <DependentUpon>cutomer.cs</DependentUpon>
+    <Compile Include="customer.Designer.cs">
+      <DependentUpon>customer.cs</DependentUpon>
     </Compile>
     <Compile Include="cutomer_search.cs">
       <SubType>Form</SubType>
@@ -106,8 +106,8 @@
     <EmbeddedResource Include="customer_cancel.resx">
       <DependentUpon>customer_cancel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="cutomer.resx">
-      <DependentUpon>cutomer.cs</DependentUpon>
+    <EmbeddedResource Include="customer.resx">
+      <DependentUpon>customer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cutomer_search.resx">
       <DependentUpon>cutomer_search.cs</DependentUpon>

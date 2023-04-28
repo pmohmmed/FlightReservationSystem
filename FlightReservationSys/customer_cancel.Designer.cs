@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "customer_cancel_form";
             this.Text = "customer_cancel";
+            this.Load += new System.EventHandler(this.customer_cancel_form_Load);
             this.ResumeLayout(false);
 
         }

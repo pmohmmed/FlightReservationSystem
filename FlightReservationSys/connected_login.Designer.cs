@@ -37,8 +37,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -143,15 +143,6 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(110, 231);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -160,6 +151,15 @@
             this.label4.Size = new System.Drawing.Size(124, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "--- or creat an account ---";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(110, 231);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // connected_login_form
             // 
@@ -170,8 +170,8 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "connected_login_form";
             this.Text = "login";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.connection_form_closing);
-            this.Load += new System.EventHandler(this.connected_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.connected_form_closing);
+            this.Load += new System.EventHandler(this.connected_form_load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

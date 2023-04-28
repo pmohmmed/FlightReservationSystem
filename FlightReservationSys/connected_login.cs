@@ -13,6 +13,7 @@ namespace FlightReservationSys
 {
     public partial class connected_login_form : Form
     {
+        public static connected_login_form login_f;
         string name ="";
         string pass = "";
         string account = ""; // admin or customer
@@ -25,19 +26,15 @@ namespace FlightReservationSys
             InitializeComponent();
         }
 
-        private void connected_Load(object sender, EventArgs e)
+ 
+        private void connected_form_load(object sender, EventArgs e)
         {
+            login_f = this;
             conn = new OracleConnection(orcl);
             conn.Open();
-        
+
             password_textbox_id.PasswordChar = '*';
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void login_button_id_Click(object sender, EventArgs e)
         {
             name = username_textbox_id.Text.Trim();
@@ -60,10 +57,15 @@ namespace FlightReservationSys
                     if (d.Read())
                     {
                         admin_id = Int64.Parse(d[0].ToString());
-                        MessageBox.Show("admin id: " + admin_id.ToString());
+                        //MessageBox.Show("admin id: " + admin_id.ToString());
 
-                        //d.Close();
-                        //// open admin form
+                        d.Close();
+
+                        admin_form admin_fo = new admin_form(admin_id);
+                        admin_fo.Show();
+                        main_form.main_f.Hide();
+                        this.Dispose();
+                       
                     }
                     else
                     {
@@ -83,10 +85,15 @@ namespace FlightReservationSys
                     if (d.Read())
                     {
                         customer_id = Int64.Parse(d[0].ToString());
-                        MessageBox.Show("customer id: " + customer_id.ToString());
+                        //MessageBox.Show("customer id: " + customer_id.ToString());
 
-                        //d.Close();
-                        //// open customer form
+                        d.Close();
+                        customer_form customer_fo = new customer_form(customer_id);
+                        customer_fo.Show();                
+                        main_form.main_f.Hide();
+                        this.Dispose();
+
+                  
                     }
                     else
                     {
@@ -106,7 +113,9 @@ namespace FlightReservationSys
         private void register_button_id_Click(object sender, EventArgs e)
         {
             // open register form
-            MessageBox.Show("go to register form");
+            connected_register_form register_form = new connected_register_form();
+            register_form.ShowDialog();
+            login_f.Dispose();
 
         }
 
@@ -121,14 +130,18 @@ namespace FlightReservationSys
 
         }
 
-        private void connection_form_closing(object sender, FormClosingEventArgs e)
-        {
-            conn.Dispose();
-        }
+    
 
         private void label3_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void connected_form_closing(object sender, FormClosingEventArgs e)
+        {
+           
+            conn.Dispose();
+        }
+
     }
 }

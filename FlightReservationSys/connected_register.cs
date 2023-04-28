@@ -155,13 +155,21 @@ namespace FlightReservationSys
 
         private void register_form_closing(object sender, FormClosingEventArgs e)
         {
-            MessageBox.Show("here");
+            
             conn.Dispose();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("go to login form");
+            
+        }
+
+        private void login_button_id_Click(object sender, EventArgs e)
+        {
+            connected_login_form login = new connected_login_form();
+            login.ShowDialog();
+            this.Dispose();
         }
     }
 }

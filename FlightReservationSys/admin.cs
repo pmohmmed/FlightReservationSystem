@@ -12,9 +12,14 @@ namespace FlightReservationSys
 {
     public partial class admin_form : Form
     {
-        public admin_form()
+        public admin_form(long id)
         {
             InitializeComponent();
+        }
+
+        private void admin_form_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
