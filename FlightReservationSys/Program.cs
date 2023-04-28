@@ -16,7 +16,7 @@ namespace FlightReservationSys
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new connected_register_form());
+            Application.Run(new main_form());
         }
     }
 }

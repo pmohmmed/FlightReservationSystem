@@ -168,8 +168,8 @@ namespace FlightReservationSys
         private void login_button_id_Click(object sender, EventArgs e)
         {
             connected_login_form login = new connected_login_form();
-            login.ShowDialog();
             this.Dispose();
+            login.ShowDialog();
         }
     }
 }

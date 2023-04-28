@@ -114,8 +114,9 @@ namespace FlightReservationSys
         {
             // open register form
             connected_register_form register_form = new connected_register_form();
-            register_form.ShowDialog();
             login_f.Dispose();
+
+            register_form.ShowDialog();
 
         }
 

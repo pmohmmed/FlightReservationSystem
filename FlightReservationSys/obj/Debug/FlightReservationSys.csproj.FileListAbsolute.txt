@@ -29,9 +29,7 @@ C:\Users\doha\source\repos\FlightReservationSystem2\FlightReservationSys\bin\Deb
 C:\Users\doha\source\repos\FlightReservationSystem2\FlightReservationSys\bin\Debug\Oracle.DataAccess.dll
 C:\Users\doha\source\repos\FlightReservationSystem2\FlightReservationSys\obj\Debug\FlightReservationSys.csprojAssemblyReference.cache
 C:\Users\doha\source\repos\FlightReservationSystem2\FlightReservationSys\obj\Debug\FlightReservationSys.admin_form.resources
-C:\Users\doha\source\repos\FlightReservationSystem2\FlightReservationSys\obj\Debug\FlightReservationSys.connected_form.resources
 C:\Users\doha\source\repos\FlightReservationSystem2\FlightReservationSys\obj\Debug\FlightReservationSys.customer_cancel_form.resources
-C:\Users\doha\source\repos\FlightReservationSystem2\FlightReservationSys\obj\Debug\FlightReservationSys.cutomer_form.resources
 C:\Users\doha\source\repos\FlightReservationSystem2\FlightReservationSys\obj\Debug\FlightReservationSys.cutomer_search_form.resources
 C:\Users\doha\source\repos\FlightReservationSystem2\FlightReservationSys\obj\Debug\FlightReservationSys.main_form.resources
 C:\Users\doha\source\repos\FlightReservationSystem2\FlightReservationSys\obj\Debug\FlightReservationSys.Properties.Resources.resources
@@ -62,3 +60,6 @@ C:\Users\doha\source\repos\FlightReservationSystem\FlightReservationSys\bin\Debu
 C:\Users\doha\source\repos\FlightReservationSystem\FlightReservationSys\obj\Debug\FlightReservationSys.connected_login_form.resources
 C:\Users\doha\source\repos\FlightReservationSystem\FlightReservationSys\obj\Debug\FlightReservationSys.connected_register_form.resources
 C:\Users\doha\source\repos\FlightReservationSystem\FlightReservationSys\obj\Debug\FlightReservationSys.customer_form.resources
+C:\Users\doha\source\repos\FlightReservationSystem2\FlightReservationSys\obj\Debug\FlightReservationSys.connected_login_form.resources
+C:\Users\doha\source\repos\FlightReservationSystem2\FlightReservationSys\obj\Debug\FlightReservationSys.connected_register_form.resources
+C:\Users\doha\source\repos\FlightReservationSystem2\FlightReservationSys\obj\Debug\FlightReservationSys.customer_form.resources
