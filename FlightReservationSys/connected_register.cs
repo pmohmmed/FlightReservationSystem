@@ -32,6 +32,29 @@ namespace FlightReservationSys
         {
 
         }
+        private int get_id(OracleConnection conn, string table, string column)
+        {
+            int id = 1;
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "select " + column + " from " + table + " order by " + column + " desc";
+            OracleDataReader r = cmd.ExecuteReader();
+          
+          
+            while(r.Read())
+            {
+                
+                id = Int32.Parse(r[0].ToString()) +1;
+                break;
+                
+            }
+     
+           return id;
+            
+            
+        }
 
         private void connected_register_form_Load(object sender, EventArgs e)
         {
@@ -76,36 +99,18 @@ namespace FlightReservationSys
                     if(company != "")
                     {
 
-                        //sql_cmd.CommandText = "select admin_id from admin_table where user_password =:pass and username = :username";
-                        MessageBox.Show("insert admin reconrd");
 
-                        //int id = 233233;
-                        //// retrive id
-                        //sql_cmd.CommandText = "select * from admin_table where username=:user";
-                        //sql_cmd.Parameters.Add("user", name);
-                        //OracleDataReader r = sql_cmd.ExecuteReader();
-                        //if (r.Read())
-                        //{
-                        //    MessageBox.Show("exist");
+                        sql_cmd.CommandText = "insert into admin_table (admin_id, company_name,username , user_password) values(:admin_id, :company, :username, :pass) ";
 
-                        //}
-                        //id = sql_cmd.ExecuteNonQuery();
-                        //if (id != -1)
-                        //{
-                        //    MessageBox.Show("exist");
-                        //}
-                        //else
-                        //    MessageBox.Show("not exist");
-                        //sql_cmd.CommandText = "insert into admin_table (username,admin_id, company_name, , user_password) values(:username,:admin_id, :company,  :pass) ";
-                        //sql_cmd.Parameters.Add("admin_id",id);
-                        //sql_cmd.Parameters.Add("company", company);
-
-                        //sql_cmd.Parameters.Add("username", name);
-                        //sql_cmd.Parameters.Add("pass", pass);
+                        sql_cmd.Parameters.Add("admin_id", get_id(conn, "admin_table", "admin_id"));
+                        sql_cmd.Parameters.Add("company", company);
+                        sql_cmd.Parameters.Add("username", name);
+                        sql_cmd.Parameters.Add("pass", pass);
 
 
-                        //sql_cmd.ExecuteNonQuery();
-                        
+                        sql_cmd.ExecuteNonQuery();
+                        MessageBox.Show("SUCCESSFUL PROCESS");
+
                         username_textbox_id.Text = password_textbox_id.Text = company_textbox_id.Text ="";
 
                     }
@@ -117,11 +122,17 @@ namespace FlightReservationSys
                 }
                 else // customer
                 {
-                    MessageBox.Show("insert customer info");
 
-                    // store in customer table
+                    sql_cmd.CommandText = "insert into CUSTOMER (CUSTOMER_ID, username , user_password) values(:user_id,  :username, :pass) ";
 
-                    // give a message
+                    sql_cmd.Parameters.Add("user_id", get_id(conn, "customer", "customer_id"));
+                    sql_cmd.Parameters.Add("username", name);
+                    sql_cmd.Parameters.Add("pass", pass);
+
+
+                    sql_cmd.ExecuteNonQuery();
+                    MessageBox.Show("SUCCESSFUL PROCESS");
+
 
                     username_textbox_id.Text = password_textbox_id.Text = "";
 
