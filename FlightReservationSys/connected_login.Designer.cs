@@ -44,7 +44,7 @@
             // 
             // login_button_id
             // 
-            this.login_button_id.Location = new System.Drawing.Point(74, 178);
+            this.login_button_id.Location = new System.Drawing.Point(30, 168);
             this.login_button_id.Name = "login_button_id";
             this.login_button_id.Size = new System.Drawing.Size(202, 33);
             this.login_button_id.TabIndex = 0;
@@ -54,7 +54,7 @@
             // 
             // register_button_id
             // 
-            this.register_button_id.Location = new System.Drawing.Point(136, 247);
+            this.register_button_id.Location = new System.Drawing.Point(92, 237);
             this.register_button_id.Name = "register_button_id";
             this.register_button_id.Size = new System.Drawing.Size(77, 33);
             this.register_button_id.TabIndex = 1;
@@ -65,7 +65,7 @@
             // admin_radio_id
             // 
             this.admin_radio_id.AutoSize = true;
-            this.admin_radio_id.Location = new System.Drawing.Point(74, 145);
+            this.admin_radio_id.Location = new System.Drawing.Point(30, 135);
             this.admin_radio_id.Name = "admin_radio_id";
             this.admin_radio_id.Size = new System.Drawing.Size(53, 17);
             this.admin_radio_id.TabIndex = 2;
@@ -77,7 +77,7 @@
             // customer_radio_id
             // 
             this.customer_radio_id.AutoSize = true;
-            this.customer_radio_id.Location = new System.Drawing.Point(145, 145);
+            this.customer_radio_id.Location = new System.Drawing.Point(101, 135);
             this.customer_radio_id.Name = "customer_radio_id";
             this.customer_radio_id.Size = new System.Drawing.Size(68, 17);
             this.customer_radio_id.TabIndex = 3;
@@ -88,7 +88,7 @@
             // 
             // username_textbox_id
             // 
-            this.username_textbox_id.Location = new System.Drawing.Point(74, 42);
+            this.username_textbox_id.Location = new System.Drawing.Point(30, 32);
             this.username_textbox_id.Name = "username_textbox_id";
             this.username_textbox_id.Size = new System.Drawing.Size(202, 20);
             this.username_textbox_id.TabIndex = 4;
@@ -96,7 +96,7 @@
             // 
             // password_textbox_id
             // 
-            this.password_textbox_id.Location = new System.Drawing.Point(74, 106);
+            this.password_textbox_id.Location = new System.Drawing.Point(30, 96);
             this.password_textbox_id.Name = "password_textbox_id";
             this.password_textbox_id.Size = new System.Drawing.Size(202, 20);
             this.password_textbox_id.TabIndex = 5;
@@ -105,7 +105,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 26);
+            this.label1.Location = new System.Drawing.Point(31, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 6;
@@ -114,7 +114,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(75, 90);
+            this.label2.Location = new System.Drawing.Point(31, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 7;
@@ -122,9 +122,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -137,16 +135,16 @@
             this.groupBox1.Controls.Add(this.username_textbox_id);
             this.groupBox1.Controls.Add(this.customer_radio_id);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(248, 70);
+            this.groupBox1.Location = new System.Drawing.Point(-13, -5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(335, 298);
+            this.groupBox1.Size = new System.Drawing.Size(259, 299);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(116, 231);
+            this.label4.Location = new System.Drawing.Point(72, 221);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(124, 13);
             this.label4.TabIndex = 9;
@@ -155,7 +153,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(110, 231);
+            this.label3.Location = new System.Drawing.Point(66, 221);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 8;
@@ -166,9 +164,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(240, 281);
             this.Controls.Add(this.groupBox1);
             this.Name = "connected_login_form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.connected_form_closing);
             this.Load += new System.EventHandler(this.connected_form_load);
