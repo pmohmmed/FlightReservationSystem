@@ -47,7 +47,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -181,11 +180,11 @@
             this.button2.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.SpringGreen;
-            this.button2.Location = new System.Drawing.Point(593, 382);
+            this.button2.Location = new System.Drawing.Point(566, 394);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(157, 45);
             this.button2.TabIndex = 17;
-            this.button2.Text = "BOOK A TICKET";
+            this.button2.Text = "Buy the ticket";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -207,7 +206,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(311, 26);
             this.textBox4.TabIndex = 19;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            //this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label7
             // 
@@ -228,7 +227,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(138, 26);
             this.textBox7.TabIndex = 21;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            //this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // label8
             // 
@@ -240,19 +239,6 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "ENTER YOUR PIN ";
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Snow;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.DarkGreen;
-            this.button4.Location = new System.Drawing.Point(593, 575);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(157, 45);
-            this.button4.TabIndex = 23;
-            this.button4.Text = "BUY NOW";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -260,7 +246,7 @@
             this.label9.Cursor = System.Windows.Forms.Cursors.No;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Lime;
-            this.label9.Location = new System.Drawing.Point(756, 586);
+            this.label9.Location = new System.Drawing.Point(741, 402);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(326, 25);
             this.label9.TabIndex = 24;
@@ -274,7 +260,7 @@
             this.label10.Cursor = System.Windows.Forms.Cursors.No;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Lime;
-            this.label10.Location = new System.Drawing.Point(793, 586);
+            this.label10.Location = new System.Drawing.Point(741, 402);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(211, 25);
             this.label10.TabIndex = 25;
@@ -287,7 +273,6 @@
             this.ClientSize = new System.Drawing.Size(1113, 726);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label7);
@@ -309,6 +294,8 @@
             this.Controls.Add(this.textBox1);
             this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Name = "cutomer_search";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.cutomer_search_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.cutomer_search_FormClosed);
             this.Load += new System.EventHandler(this.cutomer_search_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -336,7 +323,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
     }

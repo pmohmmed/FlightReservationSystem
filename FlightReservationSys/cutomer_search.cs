@@ -6,10 +6,14 @@ using System.Data;
 using System.Data.Common;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
+using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace FlightReservationSys
 {
@@ -19,9 +23,12 @@ namespace FlightReservationSys
     {
         List<int> currentListBoxFlightId = new List<int>();
         List<int> currentListBoxCapacity = new List<int>();
+        List<int> currentListBoxPrice = new List<int>();
+        int loggedCustomerId = 2;
         int clickedFlightId = -1,
             currentClickedFlightCapacity = -1,
-            indexOfClickedItem = -1;
+            indexOfClickedItem = -1,
+            currentClickedFlightPrice = -1;
         string ordb = "Data Source=ORCL; User Id=scott; Password=tiger;";
         OracleConnection conn;
         public cutomer_search()
@@ -34,16 +41,16 @@ namespace FlightReservationSys
         // for every search and initialization of the form we need to set some values
         void resetTheForm()
         {
-            textBox4.Visible = false;
-            textBox7.Visible = false;
             listBox1.Items.Clear();
             currentListBoxFlightId.Clear();
             currentListBoxCapacity.Clear();
+            currentListBoxPrice.Clear();
             label9.Visible= false;
             label10.Visible=false;
             clickedFlightId = -1;
             currentClickedFlightCapacity = -1;
             indexOfClickedItem = -1;
+            currentClickedFlightPrice = -1;
         }
         private void cutomer_search_Load_1(object sender, EventArgs e)
         {
@@ -51,26 +58,107 @@ namespace FlightReservationSys
             conn.Open();
         }
 
-        private bool checkCustomerBalance(string cardNum, int pin)
+        private void insertBookingHistory(int customerId, int flightId, string cardNum)
         {
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select balance from bank_info where card_num =:card_num AND PIN =:pin";
-            cmd.Parameters.Add("card_num", cardNum);
-            cmd.Parameters.Add("pin", pin.ToString());
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "insert into booked_flights values(:flightId , :customerId , :cardNum)";
+            cmd.Parameters.Add("flightId", flightId);
+            cmd.Parameters.Add("customerId", customerId.ToString());
+            cmd.Parameters.Add("cardNum", cardNum);
             try
             {
                 int rowsAffected = cmd.ExecuteNonQuery();
             }
+            catch (Exception ex)
+            {
+                cmd.Dispose();
+            }
+            // Clean up resources
+            cmd.Dispose();
+        }
+        private int isBookedBefore(int flightId, int customerId)
+        {
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandType= CommandType.StoredProcedure;
+            cmd.CommandText = "get_booked_tickets_count";
+            cmd.Parameters.Add("customer_id", OracleDbType.Int32).Value = customerId;
+            cmd.Parameters.Add("flight_id", OracleDbType.Int32).Value = flightId;
+
+            cmd.Parameters.Add("count", OracleDbType.Int32, ParameterDirection.Output);
+
+
+            // Retrieve the output parameter value
+            int count = -1;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                var c = cmd.Parameters["count"].Value;
+                count = Convert.ToInt32(c.ToString());
+            }
             catch (DbException ex)
             {
                 cmd.Dispose();
-                return false;
             }
             // Clean up resources
             cmd.Dispose();
 
-            return true;
+            return count;
+        }
+        private int checkCustomerBalance(int customerId, string cardNum, int pin, float flightPrice)
+        {
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "get_balance";
+            cmd.Parameters.Add("card_num", OracleDbType.Varchar2).Value = cardNum;
+            cmd.Parameters.Add("PIN", OracleDbType.Int32).Value = pin;
+            cmd.Parameters.Add("balance", OracleDbType.Int32, ParameterDirection.Output);
+
+            int balance = -1;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                if (cmd.Parameters["balance"].Value != null)
+                    balance = Convert.ToInt32(cmd.Parameters["balance"].Value.ToString());
+                else
+                    return 0;
+            }
+            catch (Exception ex)
+            {
+                var c = cmd.Parameters["balance"].Value;
+                var cd = cmd.Parameters["card_num"].Value;
+                var ccd = cmd.Parameters["PIN"].Value;
+                cmd.Dispose();
+            }
+            // Clean up resources
+            cmd.Dispose();
+
+            return balance;
+        }
+        private void updateCustomerBalance(int customerId, float newBalanceToSet)
+        {
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "update bank_info set balance = :newBalance where customer_id = :customerId";
+            var newBalance = 
+            cmd.Parameters.Add("newBalance", newBalanceToSet);
+            cmd.Parameters.Add("customerId", customerId.ToString());
+            try
+            {
+                int rowsAffected = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                cmd.Dispose();
+            }
+            // Clean up resources
+            cmd.Dispose();
         }
         private bool makeReservation(int flightId, int currentCapacity)
         {
@@ -166,6 +254,7 @@ namespace FlightReservationSys
                 answer.Append($"'{dr[0]}'  {dr[1]},  '{dr[2]}', {dr[3]}");
                 currentListBoxFlightId.Add(int.Parse(dr[4].ToString()));
                 currentListBoxCapacity.Add(int.Parse(dr[5].ToString()));
+                currentListBoxPrice.Add(int.Parse(dr[2].ToString()));
                 listBox1.Items.Add(answer);
             }
             cmd.Dispose();
@@ -216,35 +305,44 @@ namespace FlightReservationSys
             {
                 clickedFlightId = currentListBoxFlightId[indexOfClickedItem];
                 currentClickedFlightCapacity = currentListBoxCapacity[indexOfClickedItem];
+                currentClickedFlightPrice    = currentListBoxPrice[indexOfClickedItem];
             }
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (clickedFlightId != -1)
+            //Thread.Sleep(1000);
+            if (clickedFlightId != -1 && !string.IsNullOrEmpty(textBox4.Text) && 
+                !string.IsNullOrEmpty(textBox7.Text))
             {
-                textBox4.Visible = true;
-                textBox7.Visible = true;
-                while (string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox7.Text))
+                int isBookedStatus = isBookedBefore(clickedFlightId, loggedCustomerId);
+
+                int customerBalance = checkCustomerBalance(loggedCustomerId, textBox4.Text,
+                    int.Parse(textBox7.Text), currentClickedFlightPrice);
+
+                bool reservationStatus = false;
+
+                if (isBookedStatus == 0 &&  customerBalance>= currentClickedFlightPrice)
                 {
-
+                    reservationStatus = makeReservation(clickedFlightId, currentClickedFlightCapacity);
+                    updateCustomerBalance(loggedCustomerId, customerBalance - currentClickedFlightPrice);
                 }
-
-                bool reservationStatus = makeReservation(clickedFlightId, currentClickedFlightCapacity);
                 if (reservationStatus)
                 {
+                    insertBookingHistory(loggedCustomerId, clickedFlightId, textBox4.Text);
+                    // remove the cursor if a flight is booked to prepare new search or book operation
                     label9.Visible = true;
                     if (currentClickedFlightCapacity == 1)
                     {
                         listBox1.Items.Remove(listBox1.SelectedItem);
-                        listBox1.Refresh();
+                        //listBox1.Refresh();
                     }
-                    listBox1.Refresh();
+                    listBox1.SelectedIndex = -1;
+                    //listBox1.Refresh();
                 }
                 else
                     label10.Visible = true;
-                label10.Visible = true;
             }
         }
 
@@ -266,6 +364,17 @@ namespace FlightReservationSys
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cutomer_search_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            resetTheForm();
+            conn.Dispose();
+        }
+
+        private void cutomer_search_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // return to the main form
         }
 
         private void label9_Click(object sender, EventArgs e)
