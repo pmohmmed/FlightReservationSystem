@@ -124,6 +124,7 @@
             this.company_label_id.Size = new System.Drawing.Size(50, 13);
             this.company_label_id.TabIndex = 6;
             this.company_label_id.Text = "company";
+            this.company_label_id.Visible = false;
             // 
             // company_textbox_id
             // 
@@ -131,6 +132,7 @@
             this.company_textbox_id.Name = "company_textbox_id";
             this.company_textbox_id.Size = new System.Drawing.Size(207, 20);
             this.company_textbox_id.TabIndex = 3;
+            this.company_textbox_id.Visible = false;
             // 
             // username_label_id
             // 
@@ -171,6 +173,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(324, 261);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "connected_register_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "register";

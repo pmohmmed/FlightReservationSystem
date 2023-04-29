@@ -87,6 +87,8 @@
             this.Controls.Add(this.crystal_button_id);
             this.Controls.Add(this.disconnected_button_id);
             this.Controls.Add(this.connected_button_id);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "main_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "main";
