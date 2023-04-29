@@ -38,7 +38,7 @@ namespace FlightReservationSys
 
         private void crystal_button_id_Click(object sender, EventArgs e)
         {
-            CrystalReport repo = new CrystalReport();
+            CrystalReportForm repo = new CrystalReportForm();
             repo.Show();
             this.WindowState = FormWindowState.Minimized;
 

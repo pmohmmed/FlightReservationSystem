@@ -33,12 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\app\pmohamed\product\11.2.0\dbhome_1\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\app\engma\product\11.2.0\dbhome_1\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -68,13 +74,12 @@
     <Compile Include="connected_register.Designer.cs">
       <DependentUpon>connected_register.cs</DependentUpon>
     </Compile>
-    <Compile Include="CrystalReport.cs">
-      <SubType>Form</SubType>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CrystalReport.Designer.cs">
-      <DependentUpon>CrystalReport.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CrystalReport3.cs" />
     <Compile Include="customer_cancel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +98,12 @@
     <Compile Include="cutomer_search.Designer.cs">
       <DependentUpon>cutomer_search.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrystalReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrystalReportForm.Designer.cs">
+      <DependentUpon>CrystalReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +120,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="connected_register.resx">
       <DependentUpon>connected_register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportForm.resx">
+      <DependentUpon>CrystalReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="customer_cancel.resx">
       <DependentUpon>customer_cancel.cs</DependentUpon>
@@ -131,7 +149,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="CrystalReport3.rpt" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -144,6 +161,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
