@@ -47,7 +47,7 @@
             this.login_button_id.Location = new System.Drawing.Point(30, 168);
             this.login_button_id.Name = "login_button_id";
             this.login_button_id.Size = new System.Drawing.Size(202, 33);
-            this.login_button_id.TabIndex = 0;
+            this.login_button_id.TabIndex = 4;
             this.login_button_id.Text = "login";
             this.login_button_id.UseVisualStyleBackColor = true;
             this.login_button_id.Click += new System.EventHandler(this.login_button_id_Click);
@@ -57,7 +57,7 @@
             this.register_button_id.Location = new System.Drawing.Point(92, 237);
             this.register_button_id.Name = "register_button_id";
             this.register_button_id.Size = new System.Drawing.Size(77, 33);
-            this.register_button_id.TabIndex = 1;
+            this.register_button_id.TabIndex = 5;
             this.register_button_id.Text = "register";
             this.register_button_id.UseVisualStyleBackColor = true;
             this.register_button_id.Click += new System.EventHandler(this.register_button_id_Click);
@@ -91,7 +91,7 @@
             this.username_textbox_id.Location = new System.Drawing.Point(30, 32);
             this.username_textbox_id.Name = "username_textbox_id";
             this.username_textbox_id.Size = new System.Drawing.Size(202, 20);
-            this.username_textbox_id.TabIndex = 4;
+            this.username_textbox_id.TabIndex = 0;
             this.username_textbox_id.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // password_textbox_id
@@ -99,7 +99,7 @@
             this.password_textbox_id.Location = new System.Drawing.Point(30, 96);
             this.password_textbox_id.Name = "password_textbox_id";
             this.password_textbox_id.Size = new System.Drawing.Size(202, 20);
-            this.password_textbox_id.TabIndex = 5;
+            this.password_textbox_id.TabIndex = 1;
             this.password_textbox_id.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1

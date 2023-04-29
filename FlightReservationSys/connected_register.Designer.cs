@@ -57,28 +57,27 @@
             this.groupBox1.Controls.Add(this.password_label_id);
             this.groupBox1.Controls.Add(this.username_textbox_id);
             this.groupBox1.Controls.Add(this.password_textbox_id);
-            this.groupBox1.Location = new System.Drawing.Point(0, -9);
+            this.groupBox1.Location = new System.Drawing.Point(-3, -10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(309, 289);
+            this.groupBox1.Size = new System.Drawing.Size(328, 289);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(90, 223);
+            this.label1.Location = new System.Drawing.Point(94, 217);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "---- u have an account ? ---";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // login_button_id
             // 
-            this.login_button_id.Location = new System.Drawing.Point(123, 239);
+            this.login_button_id.Location = new System.Drawing.Point(132, 233);
             this.login_button_id.Name = "login_button_id";
             this.login_button_id.Size = new System.Drawing.Size(60, 25);
-            this.login_button_id.TabIndex = 11;
+            this.login_button_id.TabIndex = 7;
             this.login_button_id.Text = "login";
             this.login_button_id.UseVisualStyleBackColor = true;
             this.login_button_id.Click += new System.EventHandler(this.login_button_id_Click);
@@ -86,10 +85,10 @@
             // customer_radio_id
             // 
             this.customer_radio_id.AutoSize = true;
-            this.customer_radio_id.Location = new System.Drawing.Point(143, 141);
+            this.customer_radio_id.Location = new System.Drawing.Point(132, 135);
             this.customer_radio_id.Name = "customer_radio_id";
             this.customer_radio_id.Size = new System.Drawing.Size(68, 17);
-            this.customer_radio_id.TabIndex = 10;
+            this.customer_radio_id.TabIndex = 5;
             this.customer_radio_id.TabStop = true;
             this.customer_radio_id.Text = "customer";
             this.customer_radio_id.UseVisualStyleBackColor = true;
@@ -98,10 +97,10 @@
             // admin_radio_id
             // 
             this.admin_radio_id.AutoSize = true;
-            this.admin_radio_id.Location = new System.Drawing.Point(74, 141);
+            this.admin_radio_id.Location = new System.Drawing.Point(63, 135);
             this.admin_radio_id.Name = "admin_radio_id";
             this.admin_radio_id.Size = new System.Drawing.Size(53, 17);
-            this.admin_radio_id.TabIndex = 9;
+            this.admin_radio_id.TabIndex = 4;
             this.admin_radio_id.TabStop = true;
             this.admin_radio_id.Text = "admin";
             this.admin_radio_id.UseVisualStyleBackColor = true;
@@ -109,10 +108,10 @@
             // 
             // register_button_id
             // 
-            this.register_button_id.Location = new System.Drawing.Point(74, 178);
+            this.register_button_id.Location = new System.Drawing.Point(63, 172);
             this.register_button_id.Name = "register_button_id";
-            this.register_button_id.Size = new System.Drawing.Size(158, 30);
-            this.register_button_id.TabIndex = 8;
+            this.register_button_id.Size = new System.Drawing.Size(207, 30);
+            this.register_button_id.TabIndex = 6;
             this.register_button_id.Text = "register";
             this.register_button_id.UseVisualStyleBackColor = true;
             this.register_button_id.Click += new System.EventHandler(this.register_button_id_Click);
@@ -120,7 +119,7 @@
             // company_label_id
             // 
             this.company_label_id.AutoSize = true;
-            this.company_label_id.Location = new System.Drawing.Point(9, 105);
+            this.company_label_id.Location = new System.Drawing.Point(7, 99);
             this.company_label_id.Name = "company_label_id";
             this.company_label_id.Size = new System.Drawing.Size(50, 13);
             this.company_label_id.TabIndex = 6;
@@ -128,15 +127,15 @@
             // 
             // company_textbox_id
             // 
-            this.company_textbox_id.Location = new System.Drawing.Point(74, 102);
+            this.company_textbox_id.Location = new System.Drawing.Point(63, 96);
             this.company_textbox_id.Name = "company_textbox_id";
-            this.company_textbox_id.Size = new System.Drawing.Size(158, 20);
-            this.company_textbox_id.TabIndex = 4;
+            this.company_textbox_id.Size = new System.Drawing.Size(207, 20);
+            this.company_textbox_id.TabIndex = 3;
             // 
             // username_label_id
             // 
             this.username_label_id.AutoSize = true;
-            this.username_label_id.Location = new System.Drawing.Point(6, 50);
+            this.username_label_id.Location = new System.Drawing.Point(7, 44);
             this.username_label_id.Name = "username_label_id";
             this.username_label_id.Size = new System.Drawing.Size(53, 13);
             this.username_label_id.TabIndex = 7;
@@ -146,7 +145,7 @@
             // password_label_id
             // 
             this.password_label_id.AutoSize = true;
-            this.password_label_id.Location = new System.Drawing.Point(7, 76);
+            this.password_label_id.Location = new System.Drawing.Point(8, 73);
             this.password_label_id.Name = "password_label_id";
             this.password_label_id.Size = new System.Drawing.Size(52, 13);
             this.password_label_id.TabIndex = 5;
@@ -154,23 +153,23 @@
             // 
             // username_textbox_id
             // 
-            this.username_textbox_id.Location = new System.Drawing.Point(74, 50);
+            this.username_textbox_id.Location = new System.Drawing.Point(63, 44);
             this.username_textbox_id.Name = "username_textbox_id";
-            this.username_textbox_id.Size = new System.Drawing.Size(158, 20);
-            this.username_textbox_id.TabIndex = 3;
+            this.username_textbox_id.Size = new System.Drawing.Size(207, 20);
+            this.username_textbox_id.TabIndex = 1;
             // 
             // password_textbox_id
             // 
-            this.password_textbox_id.Location = new System.Drawing.Point(74, 76);
+            this.password_textbox_id.Location = new System.Drawing.Point(63, 70);
             this.password_textbox_id.Name = "password_textbox_id";
-            this.password_textbox_id.Size = new System.Drawing.Size(158, 20);
+            this.password_textbox_id.Size = new System.Drawing.Size(207, 20);
             this.password_textbox_id.TabIndex = 2;
             // 
             // connected_register_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(307, 280);
+            this.ClientSize = new System.Drawing.Size(324, 261);
             this.Controls.Add(this.groupBox1);
             this.Name = "connected_register_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

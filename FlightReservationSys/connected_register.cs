@@ -148,11 +148,6 @@ namespace FlightReservationSys
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void register_form_closing(object sender, FormClosingEventArgs e)
         {
             
@@ -160,10 +155,6 @@ namespace FlightReservationSys
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void login_button_id_Click(object sender, EventArgs e)
         {
