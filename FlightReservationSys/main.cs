@@ -35,5 +35,13 @@ namespace FlightReservationSys
             login_form.ShowDialog();
             
         }
+
+        private void crystal_button_id_Click(object sender, EventArgs e)
+        {
+            CrystalReport repo = new CrystalReport();
+            repo.Show();
+            this.WindowState = FormWindowState.Minimized;
+
+        }
     }
 }

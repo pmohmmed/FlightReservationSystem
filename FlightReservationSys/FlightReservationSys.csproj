@@ -68,6 +68,13 @@
     <Compile Include="connected_register.Designer.cs">
       <DependentUpon>connected_register.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrystalReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrystalReport.Designer.cs">
+      <DependentUpon>CrystalReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport3.cs" />
     <Compile Include="customer_cancel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +131,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="CrystalReport3.rpt" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

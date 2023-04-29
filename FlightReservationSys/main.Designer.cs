@@ -55,6 +55,7 @@
             this.crystal_button_id.TabIndex = 4;
             this.crystal_button_id.Text = "crystal";
             this.crystal_button_id.UseVisualStyleBackColor = false;
+            this.crystal_button_id.Click += new System.EventHandler(this.crystal_button_id_Click);
             // 
             // connected_button_id
             // 
