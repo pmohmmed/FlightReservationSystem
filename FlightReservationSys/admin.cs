@@ -18,7 +18,7 @@ namespace FlightReservationSys
     public partial class admin_form : Form
     {
         long admin_id;
-        string ordb = "Data Source=orcl;User Id=scott;Password=oracle;";
+        string ordb = "Data Source=orcl;User Id=scott;Password=tiger;";
         OracleConnection conn;
         public admin_form(long Id)
         {
