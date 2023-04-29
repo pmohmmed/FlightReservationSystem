@@ -17,7 +17,7 @@ namespace FlightReservationSys
         string name ="";
         string pass = "";
         string account = ""; // admin or customer
-        string orcl = "Data Source = orcl;User Id=scott;Password = tiger;";
+        string orcl = "Data Source = orcl;User Id=scott;Password = oracle;";
         OracleConnection conn;
         OracleCommand sql_cmd;
 
@@ -57,7 +57,7 @@ namespace FlightReservationSys
                     if (d.Read())
                     {
                         admin_id = Int64.Parse(d[0].ToString());
-                        //MessageBox.Show("admin id: " + admin_id.ToString());
+                        MessageBox.Show("admin id: " + admin_id.ToString());
 
                         d.Close();
 

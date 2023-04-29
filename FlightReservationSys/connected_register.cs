@@ -18,7 +18,7 @@ namespace FlightReservationSys
         string pass = "";
         string account = ""; // admin or customer
         string company = "";
-        string orcl = "Data Source=orcl;User Id=scott;Password=tiger;";
+        string orcl = "Data Source=orcl;User Id=scott;Password=oracle;";
         OracleConnection conn;
         OracleCommand sql_cmd;
 
