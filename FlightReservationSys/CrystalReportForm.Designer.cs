@@ -33,6 +33,8 @@ namespace FlightReservationSys
             this.label1 = new System.Windows.Forms.Label();
             this.user_name_category_cmb_id = new System.Windows.Forms.ComboBox();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.ordinal_report = new System.Windows.Forms.Button();
+            this.Summrized_report = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // generate_btn_id
@@ -74,11 +76,33 @@ namespace FlightReservationSys
             this.crystalReportViewer1.Size = new System.Drawing.Size(1537, 656);
             this.crystalReportViewer1.TabIndex = 3;
             // 
+            // ordinal_report
+            // 
+            this.ordinal_report.Location = new System.Drawing.Point(682, 22);
+            this.ordinal_report.Name = "ordinal_report";
+            this.ordinal_report.Size = new System.Drawing.Size(130, 23);
+            this.ordinal_report.TabIndex = 4;
+            this.ordinal_report.Text = "Ordinal Report";
+            this.ordinal_report.UseVisualStyleBackColor = true;
+            this.ordinal_report.Click += new System.EventHandler(this.ordinal_report_Click);
+            // 
+            // Summrized_report
+            // 
+            this.Summrized_report.Location = new System.Drawing.Point(844, 22);
+            this.Summrized_report.Name = "Summrized_report";
+            this.Summrized_report.Size = new System.Drawing.Size(149, 23);
+            this.Summrized_report.TabIndex = 5;
+            this.Summrized_report.Text = "Summrized Report";
+            this.Summrized_report.UseVisualStyleBackColor = true;
+            this.Summrized_report.Click += new System.EventHandler(this.button1_Click);
+            // 
             // CrystalReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1561, 719);
+            this.Controls.Add(this.Summrized_report);
+            this.Controls.Add(this.ordinal_report);
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.user_name_category_cmb_id);
             this.Controls.Add(this.label1);
@@ -97,5 +121,7 @@ namespace FlightReservationSys
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox user_name_category_cmb_id;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private System.Windows.Forms.Button ordinal_report;
+        private System.Windows.Forms.Button Summrized_report;
     }
 }
