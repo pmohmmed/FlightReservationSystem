@@ -63,7 +63,7 @@ namespace FlightReservationSys
 
                         admin_form admin_fo = new admin_form(admin_id);
                         admin_fo.Show();
-                        main_form.main_f.Hide();
+                        //main_form.main_f.Hide();
                         this.Dispose();
                        
                     }
@@ -90,7 +90,7 @@ namespace FlightReservationSys
                         d.Close();
                         customer_form customer_fo = new customer_form(customer_id);
                         customer_fo.Show();                
-                        main_form.main_f.Hide();
+                        //main_form.main_f.Hide();
                         this.Dispose();
 
                   
