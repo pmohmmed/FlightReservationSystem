@@ -23,3 +23,17 @@ C:\Users\doha\source\repos\FlightReservationSystem\FlightReservationSys\obj\Debu
 C:\Users\doha\source\repos\FlightReservationSystem\FlightReservationSys\obj\Debug\FlightReservationSys.csproj.CopyComplete
 C:\Users\doha\source\repos\FlightReservationSystem\FlightReservationSys\obj\Debug\FlightReservationSys.exe
 C:\Users\doha\source\repos\FlightReservationSystem\FlightReservationSys\obj\Debug\FlightReservationSys.pdb
+C:\Users\moham\Source\Repos\FlightReservationSystem\FlightReservationSys\bin\Debug\FlightReservationSys.exe.config
+C:\Users\moham\Source\Repos\FlightReservationSystem\FlightReservationSys\bin\Debug\FlightReservationSys.exe
+C:\Users\moham\Source\Repos\FlightReservationSystem\FlightReservationSys\bin\Debug\FlightReservationSys.pdb
+C:\Users\moham\Source\Repos\FlightReservationSystem\FlightReservationSys\obj\Debug\FlightReservationSys.csproj.AssemblyReference.cache
+C:\Users\moham\Source\Repos\FlightReservationSystem\FlightReservationSys\obj\Debug\FlightReservationSys.csproj.SuggestedBindingRedirects.cache
+C:\Users\moham\Source\Repos\FlightReservationSystem\FlightReservationSys\obj\Debug\FlightReservationSys.connected.resources
+C:\Users\moham\Source\Repos\FlightReservationSystem\FlightReservationSys\obj\Debug\FlightReservationSys.cutomer.resources
+C:\Users\moham\Source\Repos\FlightReservationSystem\FlightReservationSys\obj\Debug\FlightReservationSys.cutomer_search.resources
+C:\Users\moham\Source\Repos\FlightReservationSystem\FlightReservationSys\obj\Debug\FlightReservationSys.main_form_id.resources
+C:\Users\moham\Source\Repos\FlightReservationSystem\FlightReservationSys\obj\Debug\FlightReservationSys.Properties.Resources.resources
+C:\Users\moham\Source\Repos\FlightReservationSystem\FlightReservationSys\obj\Debug\FlightReservationSys.csproj.GenerateResource.cache
+C:\Users\moham\Source\Repos\FlightReservationSystem\FlightReservationSys\obj\Debug\FlightReservationSys.csproj.CoreCompileInputs.cache
+C:\Users\moham\Source\Repos\FlightReservationSystem\FlightReservationSys\obj\Debug\FlightReservationSys.exe
+C:\Users\moham\Source\Repos\FlightReservationSystem\FlightReservationSys\obj\Debug\FlightReservationSys.pdb

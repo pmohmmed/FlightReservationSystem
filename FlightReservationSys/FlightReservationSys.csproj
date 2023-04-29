@@ -94,6 +94,9 @@
     <EmbeddedResource Include="cutomer.resx">
       <DependentUpon>cutomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="cutomer_search.resx">
+      <DependentUpon>cutomer_search.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
